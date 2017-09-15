@@ -1,0 +1,15 @@
+.quote_card {
+    padding: 20px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.quote {
+    width: 70%;
+}
+
+.rating, .buttons {
+    width: 15%;
+}

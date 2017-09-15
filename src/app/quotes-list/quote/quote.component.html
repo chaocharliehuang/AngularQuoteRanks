@@ -1,0 +1,28 @@
+<div class="quote_card">
+  <div class="quote">
+    <p>
+      "{{ quote.text }}"
+      <br>
+      - {{ quote.author }}
+    </p>
+  </div>
+  <div class="rating">
+    <h1>{{ quote.rating }}</h1>
+  </div>
+  <div class="buttons">
+    <button
+      (click)="upvote(i)">
+      Vote Up
+    </button>
+    <br><br>
+    <button
+      (click)="downvote(i)">
+      Vote Down
+    </button>
+    <br><br>
+    <button
+      (click)="delete(i)">
+      Delete
+    </button>
+  </div>
+</div>
