@@ -1,0 +1,30 @@
+<h1>Add a Quote</h1>
+<form
+  (submit)="triggerQuoteSubmitEvent()"
+  #formData="ngForm">
+  <p>
+    <textarea
+      name="text"
+      cols="30" rows="5"
+      required
+      minlength="4"
+      maxlength="256"
+      [(ngModel)]="quote.text"
+      #text="ngModel">
+    </textarea>
+    <span style="color:red;" *ngIf="text.errors">Text must be at least 4 characters long.</span>
+  </p>
+  <p>
+    Author: 
+    <input
+      type="text"
+      name="author"
+      required
+      minlength="1"
+      maxlength="50"
+      [(ngModel)]="quote.author"
+      #author="ngModel">
+      <span style="color:red;" *ngIf="author.errors">Author name must be at least 1 character long.</span>
+  </p>
+  <input type="submit" value="Add Quote" [disabled]="!formData.valid">
+</form>
